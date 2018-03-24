@@ -3,7 +3,7 @@ import treelite.predictor.*;
 public class Wrapper {
   // value[i] contains a floating-point value or NaN (Not A Number).
   // value[i]=NaN indicates that feature i is missing
-  public static float Predict(float[] value) {
+  public static float Predict(float[] value, boolean pred_margin) {
     final int num_feature = Main.get_num_feature();
     assert num_feature == value.length;
     Entry[] data = new Entry[num_feature];
@@ -14,6 +14,6 @@ public class Wrapper {
         data[i].fvalue.set(value[i]);
       }
     }
-    return Main.predict_margin(data);
+    return Main.predict(data, pred_margin);
   }
 }
