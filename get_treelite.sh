@@ -2,7 +2,7 @@
 
 set -x
 # check out latest treelite repository
-git clone --recursive https://github.com/dmlc/treelite
+git clone --recursive -b refactor_v2 https://github.com/dmlc/treelite
 cd treelite
 # build
 if [ -d "build" ]
