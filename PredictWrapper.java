@@ -1,4 +1,4 @@
-import hcho3.treelite_java_example.*; 
+import hcho3.treelite_java_example.*;
 
 public class PredictWrapper {
   public PredictWrapper() {
@@ -15,9 +15,9 @@ public class PredictWrapper {
     assert num_feature == value.length;
     for (int i = 0; i < num_feature; ++i) {
       if (Float.isNaN(value[i])) {
-        data[i].missing.set(-1);
+        data[i].setMissing();
       } else {
-        data[i].fvalue.set(value[i]);
+        data[i].setFValue(value[i]);
       }
     }
     return Main.predict(data, pred_margin);

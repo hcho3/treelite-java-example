@@ -1,0 +1,4 @@
+[submodule "treelite"]
+	path = treelite
+	url = https://github.com/dmlc/treelite
+	branch = refactor_v2
